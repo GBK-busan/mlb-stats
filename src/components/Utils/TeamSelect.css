@@ -1,0 +1,15 @@
+.team-select {
+  margin: 1.5rem;
+}
+
+.team-select label {
+  margin-right: 0.5rem;
+}
+
+.team-select select {
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #4b5563;
+  background: #0f172a;
+  color: #f9fafb;
+}

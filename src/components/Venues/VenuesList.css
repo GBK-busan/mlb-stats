@@ -1,0 +1,150 @@
+.venues-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.75rem 2.5rem;
+  box-sizing: border-box;
+}
+
+.venues-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.venues-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-muted, #9ca3af);
+  margin-bottom: 1rem;
+}
+
+.venues-empty {
+  font-size: 0.85rem;
+  color: var(--text-muted, #9ca3af);
+}
+
+/* ===== 그리드 ===== */
+
+.venues-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem; /* 카드 사이 간격 넉넉하게 */
+  align-items: stretch;
+}
+
+/* Link 자체를 블록으로 만들어서 각 칸을 꽉 채우게 */
+.venue-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+/* ===== 카드 ===== */
+
+.venue-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.1rem;
+  border-radius: 0.9rem;
+  background: #020617;
+  border: 1px solid rgba(55, 65, 81, 0.95);
+  box-sizing: border-box;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease,
+    transform 0.15s ease;
+}
+
+.venue-card-link:hover .venue-card {
+  border-color: #1d4ed8;
+  box-shadow: 0 16px 26px rgba(15, 23, 42, 0.8);
+  transform: translateY(-2px);
+}
+
+.venue-card-header {
+  margin-bottom: 0.75rem;
+}
+
+.venue-card-tag {
+  font-size: 0.7rem;
+  letter-spacing: 0.13em;
+  color: #93c5fd;
+  text-transform: uppercase;
+}
+
+.venue-card-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: 0.2rem;
+  margin-bottom: 0.15rem;
+}
+
+.venue-card-id {
+  font-size: 0.78rem;
+  color: #9ca3af;
+}
+
+/* ===== 홈 팀 섹션 ===== */
+
+.venue-card-body {
+  border-top: 1px solid rgba(31, 41, 55, 0.9);
+  padding-top: 0.6rem;
+}
+
+.venue-card-teams-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-soft, #cbd5f5);
+  margin-bottom: 0.4rem;
+}
+
+.venue-card-teams {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.venue-team-pill {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.venue-team-logo {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.venue-team-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.venue-team-name-ko {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.venue-team-name-en {
+  font-size: 0.76rem;
+  color: #9ca3af;
+}
+
+.venue-team-meta {
+  font-size: 0.72rem;
+  color: #9ca3af;
+}
+
+/* ===== 모바일 ===== */
+
+@media (max-width: 768px) {
+  .venues-page {
+    padding: 1.25rem 1rem 2rem;
+  }
+
+  .venues-grid {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+}

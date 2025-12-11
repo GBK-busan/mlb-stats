@@ -1,0 +1,85 @@
+.linescore-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--card-border);
+}
+
+/* 헤더 */
+.linescore-table thead {
+  background: #111827;
+}
+
+.linescore-table th,
+.linescore-table td {
+  padding: 0.4rem 0.45rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(31, 41, 55, 0.9);
+}
+
+/* 팀 이름 칸 (AWAY / HOME) */
+.linescore-table tbody td:first-child {
+  font-weight: 600;
+  text-align: left;
+  padding-left: 0.6rem;
+  color: #e5e7eb;
+}
+
+/* 이닝 헤더 셀 (클릭 가능) */
+.inning-cell {
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.05s ease;
+  min-width: 1.8rem;
+}
+
+.inning-cell:hover {
+  background: rgba(55, 65, 81, 0.7);
+}
+
+/* 선택된 이닝 */
+.inning-cell.selected {
+  background: var(--mlb-blue);
+  color: #f9fafb;
+  font-weight: 700;
+  position: relative;
+}
+
+/* 빨간색 MLB 언더바 강조 */
+.inning-cell.selected::after {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* 테이블 border 위로 자연스럽게 */
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--mlb-red);
+  border-radius: 2px;
+}
+
+/* 마지막 R / H / E 칼럼 살짝 강조 */
+.linescore-table th:last-child,
+.linescore-table th:nth-last-child(2),
+.linescore-table th:nth-last-child(3) {
+  font-weight: 700;
+}
+
+.linescore-table td:last-child,
+.linescore-table td:nth-last-child(2),
+.linescore-table td:nth-last-child(3) {
+  background: rgba(15, 23, 42, 0.9);
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .linescore-table {
+    font-size: 0.78rem;
+  }
+
+  .linescore-table th,
+  .linescore-table td {
+    padding: 0.3rem 0.3rem;
+  }
+}

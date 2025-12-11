@@ -1,0 +1,136 @@
+.standings-page {
+  padding: 1.5rem 2rem;
+  color: var(--text-main);
+}
+
+/* 상단 컨트롤 */
+.standings-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.standings-controls h1 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.season-select {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.season-select select {
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #4b5563;
+  background: #0f172a;
+  color: #f9fafb;
+}
+
+/* 리그 래핑 */
+.standings-league-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* 리그 섹션 */
+.league-section {
+  margin-bottom: 0.5rem;
+}
+
+.league-title {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #f3f4f6;
+  border-left: 4px solid var(--mlb-red);
+  padding-left: 0.6rem;
+}
+
+/* 지구 리스트 (AL East / AL Central 등) */
+.standings-division-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+@media (max-width: 900px) {
+  .standings-division-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 지구 카드 하나 */
+.standings-division {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 0.9rem 1rem 0.6rem;
+}
+
+.standings-division h3 {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* 테이블 */
+.standings-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.standings-table th,
+.standings-table td {
+  padding: 0.35rem 0.45rem;
+  border-bottom: 1px solid var(--card-border);
+  text-align: right;
+}
+
+.standings-table thead {
+  background: #111827;
+}
+
+.standings-table th.col-team {
+  text-align: left;
+}
+
+/* 팀 셀 */
+.team-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-align: left;
+}
+
+.team-color-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.team-logo {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.team-name {
+  font-weight: 500;
+}
+
+.team-link {
+  color: #e5e7eb;
+  text-decoration: none;
+}
+
+.team-link:hover {
+  text-decoration: underline;
+  color: #facc15;
+}

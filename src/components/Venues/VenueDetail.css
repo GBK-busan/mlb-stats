@@ -1,0 +1,254 @@
+.venue-detail {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 32px 24px 80px;
+  color: var(--mlb-text-main);
+}
+
+/* 뒤로가기 버튼 */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  margin-bottom: 20px;
+  border-radius: 999px;
+  border: 1px solid #4b5563;
+  background: transparent;
+  color: #d1d5db;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.back-link:hover {
+  background: #111827;
+  border-color: var(--mlb-red);
+  color: #f9fafb;
+}
+
+/* 상단 헤더 카드 */
+.venue-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 22px;
+  margin-bottom: 26px;
+  border-radius: 14px;
+  background: radial-gradient(
+    circle at top left,
+    #111827 0,
+    #020617 55%,
+    #020617 100%
+  );
+  border: 1px solid var(--mlb-border);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+.venue-header-main h1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.venue-location {
+  font-size: 13px;
+  color: var(--mlb-text-sub);
+}
+
+.venue-address {
+  margin-top: 2px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* 우측 메타 영역 */
+.venue-meta-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.venue-chip {
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 999px;
+  background: rgba(34, 197, 94, 0.12);
+  color: #bbf7d0;
+  border: 1px solid rgba(34, 197, 94, 0.4);
+}
+
+.venue-map-link {
+  font-size: 12px;
+  color: #bfdbfe;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.4);
+  transition: background 0.15s ease, transform 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.venue-map-link:hover {
+  background: rgba(37, 99, 235, 0.25);
+  border-color: rgba(59, 130, 246, 0.9);
+  transform: translateY(-1px);
+}
+
+/* 섹션 공통 */
+.venue-section,
+.venue-wiki-section {
+  margin-top: 32px;
+}
+
+.venue-section h2,
+.venue-wiki-section h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.venue-section h2::after,
+.venue-wiki-section h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 44px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--mlb-red);
+}
+
+/* StatsAPI 구장 정보 그리드 */
+.venue-info-grid {
+  margin-top: 18px;
+  padding: 18px 20px;
+  border-radius: 14px;
+  background: var(--mlb-card);
+  border: 1px solid var(--mlb-border);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px 18px;
+}
+
+.venue-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.venue-info-item .label {
+  font-size: 11px;
+  color: var(--mlb-text-sub);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.venue-info-item .value {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* StatsAPI 정보 없을 때 */
+.venue-extra {
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--mlb-text-sub);
+}
+
+/* Wikipedia 섹션 */
+.venue-wiki-section {
+  padding: 20px 22px 24px;
+  border-radius: 14px;
+  background: radial-gradient(
+    circle at top left,
+    #111827 0,
+    #020617 60%,
+    #000 100%
+  );
+  border: 1px solid var(--mlb-border);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+}
+
+.venue-wiki-header {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  margin-top: 14px;
+  margin-bottom: 12px;
+}
+
+.venue-picture {
+  width: 260px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(248, 250, 252, 0.08);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.55);
+  flex-shrink: 0;
+}
+
+.venue-wiki-text h2 {
+  margin-bottom: 6px;
+}
+
+.venue-desc {
+  font-size: 13px;
+  color: var(--mlb-text-sub);
+}
+
+.venue-extract {
+  margin-top: 8px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #e5e7eb;
+}
+
+/* 위키 링크 */
+.wiki-link {
+  display: inline-flex;
+  margin-top: 12px;
+  font-size: 13px;
+  color: #bfdbfe;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid rgba(191, 219, 254, 0.6);
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.wiki-link:hover {
+  color: #eff6ff;
+  border-color: #eff6ff;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .venue-detail {
+    padding: 24px 16px 56px;
+  }
+
+  .venue-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .venue-meta-box {
+    align-items: flex-start;
+  }
+
+  .venue-wiki-header {
+    flex-direction: column;
+  }
+
+  .venue-picture {
+    width: 100%;
+    height: auto;
+  }
+}

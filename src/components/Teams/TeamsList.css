@@ -1,0 +1,161 @@
+/* ===== 페이지 레이아웃 ===== */
+.teams-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem 3rem;
+  color: var(--text-main);
+}
+
+.teams-title {
+  margin: 0 0 0.3rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.teams-subtitle {
+  margin: 0 0 1.1rem;
+  font-size: 0.9rem;
+  color: var(--text-sub);
+}
+
+/* 그룹(지구) 섹션 */
+.teams-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.teams-group-title {
+  margin: 0 0 0.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* ===== 팀 카드 그리드 ===== */
+.teams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.9rem;
+}
+
+/* 링크 전체가 카드가 되도록 */
+.team-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+
+  background: var(--card-bg);
+  border-radius: 14px;
+  border: 1px solid var(--card-border);
+  padding: 0.7rem 0.9rem;
+
+  text-decoration: none;
+  color: var(--text-main);
+
+  transition: transform 0.12s ease, box-shadow 0.12s ease,
+    border-color 0.12s ease, background 0.12s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.65);
+  border-color: rgba(148, 163, 184, 0.5);
+  background: #020617;
+}
+
+/* 상단: 로고 + 팀명 */
+.team-card-main {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.team-card-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  background: #020617;
+  border-radius: 999px;
+  border: 1px solid #1f2937;
+}
+
+.team-card-names {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.team-name-ko {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.team-name-en {
+  font-size: 0.8rem;
+  color: var(--text-sub);
+}
+
+/* 하단: 리그/디비전/구장 메타 뱃지 */
+.team-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  color: var(--text-sub);
+  margin-top: 0.2rem;
+}
+
+/* 바로 아래 span만 pill 스타일 (안쪽 아이콘 span 제외) */
+.team-card-meta > span {
+  max-width: 100%;
+  padding: 0.05rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(15, 23, 42, 0.9);
+}
+
+/* 📍 + 구장 이름 한 덩어리 */
+.venue-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  background: rgba(15, 23, 42, 0.9);
+  color: #e5e7eb;
+  font-size: 11px;
+  cursor: pointer;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  outline: none;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.venue-name:hover {
+  background: rgba(30, 64, 175, 0.9);
+  border-color: rgba(129, 140, 248, 0.9);
+  color: #f9fafb;
+  transform: translateY(-1px);
+}
+/* 위치 아이콘만 살짝 정렬 */
+.venue-icon {
+  font-size: 0.8rem;
+  line-height: 1;
+  transform: translateY(1px);
+}
+
+/* ===== 반응형 ===== */
+@media (max-width: 768px) {
+  .teams-page {
+    padding: 1.2rem 1.1rem 2.3rem;
+  }
+
+  .teams-grid {
+    gap: 0.75rem;
+  }
+}

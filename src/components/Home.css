@@ -1,0 +1,176 @@
+.home-page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 32px 24px 80px;
+  color: var(--mlb-text-main);
+}
+
+/* 상단 히어로 */
+
+.home-hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 24px;
+}
+
+.home-hero-text {
+  flex: 2;
+}
+
+.home-title {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.home-desc {
+  font-size: 13px;
+  color: var(--mlb-text-sub);
+  max-width: 520px;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.home-quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.home-link-pill {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  text-decoration: none;
+  color: #e5e7eb;
+  border: 1px solid rgba(148, 163, 184, 0.8);
+  background: linear-gradient(135deg, #020617, #020617);
+  transition: background 0.15s ease, border-color 0.15s ease,
+    transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.home-link-pill:hover {
+  background: linear-gradient(135deg, #1d4ed8, #0f172a);
+  border-color: rgba(129, 140, 248, 0.95);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.7);
+}
+
+/* 히어로 오른쪽 작은 패널 */
+
+.home-hero-side {
+  flex: 1.1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.hero-badge {
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: radial-gradient(circle at top left, #111827 0, #020617 55%);
+  border: 1px solid rgba(148, 163, 184, 0.65);
+  text-align: right;
+}
+
+.hero-badge-label {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--mlb-text-sub);
+  margin-bottom: 2px;
+}
+
+.hero-badge-date {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.hero-sub {
+  font-size: 11px;
+  color: var(--mlb-text-sub);
+  max-width: 260px;
+  text-align: right;
+}
+
+/* 필터 바 */
+
+.home-filters {
+  margin-bottom: 18px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  background: var(--mlb-card);
+  border: 1px solid var(--mlb-border);
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.filter-label {
+  font-size: 11px;
+  color: var(--mlb-text-sub);
+}
+
+/* 경기 섹션 */
+
+.home-games-section {
+  margin-top: 8px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.section-subdate {
+  font-size: 12px;
+  color: var(--mlb-text-sub);
+  margin-left: 4px;
+}
+
+/* 반응형 */
+
+@media (max-width: 768px) {
+  .home-page {
+    padding: 24px 16px 56px;
+  }
+
+  .home-hero {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .home-hero-side {
+    align-items: flex-start;
+  }
+
+  .hero-badge {
+    text-align: left;
+  }
+
+  .hero-sub {
+    text-align: left;
+  }
+
+  .home-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

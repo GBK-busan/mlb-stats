@@ -1,0 +1,539 @@
+/* 메인 컨테이너 */
+.game-detail {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem 3rem;
+  color: var(--text-main);
+}
+
+/* 뒤로가기 링크 */
+.game-detail .back-link {
+  display: inline-block;
+  margin-bottom: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.game-detail .back-link:hover {
+  color: #e5e7eb;
+}
+
+/* 상단 헤더: 왼쪽 날짜, 오른쪽 상태/시간 */
+.detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 0.1rem 0;
+}
+
+.header-left .game-date {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.15rem;
+}
+
+.header-right .status {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-green);
+}
+
+.header-right .time {
+  font-size: 0.82rem;
+  color: var(--text-sub);
+}
+
+/* 점수 요약 카드 */
+.score-summary {
+  margin-top: 0.25rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.team-score {
+  background: var(--card-bg);
+  border-radius: 14px;
+  border: 1px solid var(--card-border);
+  padding: 0.7rem 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-left-width: 5px;
+}
+
+.team-info {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.detail-logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.team-name {
+  font-size: 0.95rem;
+}
+
+.score {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+/* 이닝별 점수 섹션 */
+.linescore-section {
+  margin-top: 2rem;
+}
+
+.linescore-section h2 {
+  margin: 0 0 0.6rem;
+  font-size: 1rem;
+}
+
+/* 투수 요약 섹션 */
+.pitching-summary {
+  margin-top: 2rem;
+}
+
+.pitching-summary h3 {
+  margin: 0 0 0.6rem;
+  font-size: 0.95rem;
+}
+
+.pitching-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.75rem;
+}
+
+.pitching-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  border: 1px solid var(--card-border);
+  padding: 0.6rem 0.75rem;
+  font-size: 0.82rem;
+}
+
+.pitching-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.pitching-role {
+  font-size: 0.78rem;
+  color: var(--text-sub);
+}
+
+.pitching-name {
+  font-weight: 600;
+}
+
+.pitching-team {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.pitching-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.2rem;
+  color: var(--text-sub);
+}
+
+/* 타자 주요 기록 섹션 */
+.batting-highlights {
+  margin-top: 2rem;
+}
+
+.batting-highlights h3 {
+  margin: 0 0 0.6rem;
+  font-size: 0.95rem;
+}
+
+.batting-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.batting-team {
+  background: var(--card-bg);
+  border-radius: 12px;
+  border: 1px solid var(--card-border);
+  padding: 0.6rem 0.75rem;
+  font-size: 0.82rem;
+}
+
+.batting-team h4 {
+  margin: 0 0 0.4rem;
+  font-size: 0.9rem;
+}
+
+.batting-team ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.batting-team li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid rgba(31, 41, 55, 0.7);
+}
+
+.batting-team li:last-child {
+  border-bottom: none;
+}
+
+.no-data {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.batter-name {
+  font-weight: 500;
+}
+
+.batter-stats {
+  font-size: 0.78rem;
+  color: var(--text-sub);
+}
+
+/* 플레이 로그 섹션 */
+.game-log-section {
+  margin-top: 2.2rem;
+}
+
+.game-log-section h2 {
+  margin: 0 0 0.6rem;
+  font-size: 0.95rem;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .game-detail {
+    padding: 1.2rem 1.1rem 2.5rem;
+  }
+
+  .detail-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .header-right {
+    align-items: flex-start;
+  }
+
+  .score-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .pitching-grid,
+  .batting-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-logo {
+    width: 28px;
+    height: 28px;
+  }
+
+  .score {
+    font-size: 1.25rem;
+  }
+}
+.player-link {
+  color: #e5e7eb;
+  text-decoration: none;
+}
+
+.player-link:hover {
+  text-decoration: underline;
+  color: #facc15;
+}
+.highlights-section {
+  margin-top: 2rem;
+  padding: 1.5rem 1.75rem;
+  background: var(--card-bg);
+  border-radius: 0.75rem;
+  border: 1px solid var(--border);
+}
+
+.highlights-section h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-strong);
+}
+
+.highlights-loading,
+.highlights-empty {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.highlight-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  background: #050816;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--mlb-blue);
+  box-shadow: 0 12px 20px rgba(15, 23, 42, 0.45);
+}
+
+.highlight-thumb-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+  background: #020617;
+  overflow: hidden;
+}
+
+.highlight-thumb {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.highlight-thumb.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.highlight-play-badge {
+  position: absolute;
+  right: 0.6rem;
+  bottom: 0.5rem;
+  background: rgba(220, 38, 38, 0.9);
+  color: #f9fafb;
+  font-size: 0.7rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.highlight-body {
+  padding: 0.75rem 0.9rem 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.highlight-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-strong);
+}
+
+.highlight-blurb {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.highlight-duration {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  color: var(--text-soft);
+}
+.highlights-carousel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.highlights-count {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.highlights-nav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hl-nav-btn {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  background: #020617;
+  color: #e5e7eb;
+  font-size: 0.75rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease, border-color 0.15s ease,
+    transform 0.15s ease, color 0.15s ease;
+}
+
+.hl-nav-btn:hover:not(:disabled) {
+  background: #1d4ed8;
+  border-color: rgba(129, 140, 248, 0.95);
+  color: #f9fafb;
+  transform: translateY(-1px);
+}
+
+.hl-nav-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.hl-page-indicator {
+  font-size: 0.8rem;
+  color: var(--text-sub, #9ca3af);
+}
+.highlight-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  background: #050816;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+    border-color 0.15s ease;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+  border-style: solid;
+}
+
+.highlight-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--mlb-blue, #1d4ed8);
+  box-shadow: 0 12px 20px rgba(15, 23, 42, 0.45);
+}
+
+.highlight-card:focus-visible {
+  box-shadow: 0 0 0 2px #000, 0 0 0 3px var(--mlb-red, #ba0021);
+}
+
+/* === 모달 === */
+
+.highlight-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 40;
+  padding: 16px;
+}
+
+.highlight-modal {
+  max-width: 880px;
+  width: 100%;
+  background: #020617;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8);
+  padding: 14px 16px 16px;
+}
+
+.highlight-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.highlight-modal-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.highlight-modal-close {
+  border: none;
+  background: transparent;
+  color: #9ca3af;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 999px;
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.1s ease;
+}
+
+.highlight-modal-close:hover {
+  background: rgba(31, 41, 55, 0.9);
+  color: #f9fafb;
+  transform: translateY(-1px);
+}
+
+.highlight-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.highlight-modal-video {
+  width: 100%;
+  max-height: 480px;
+  border-radius: 0.6rem;
+  background: #000;
+}
+
+.highlight-modal-blurb {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  margin-top: 4px;
+}
+
+/* 모바일에서 모달 여백 조절 */
+
+@media (max-width: 768px) {
+  .highlight-modal {
+    padding: 12px;
+  }
+}

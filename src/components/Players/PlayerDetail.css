@@ -1,0 +1,219 @@
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  background: rgba(255, 255, 255, 0.06);
+  padding: 6px 16px;
+  border-radius: 10px;
+
+  color: var(--text-sub);
+  font-size: 0.85rem;
+  font-weight: 500;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(4px);
+
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.back-link:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(-2px);
+}
+
+.back-link:active {
+  transform: translateX(-1px) scale(0.98);
+}
+.player-detail {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem 3rem;
+  color: var(--text-main);
+}
+
+/* 뒤로가기 */
+.player-detail .back-link {
+  display: inline-block;
+  margin-bottom: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.player-detail .back-link:hover {
+  color: #e5e7eb;
+}
+
+/* --- 프로필 헤더 --- */
+.player-header {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  padding: 1rem 1.2rem;
+  background: var(--card-bg);
+  border-radius: 16px;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.55);
+  margin-bottom: 1.5rem;
+}
+
+/* 프로필 사진 */
+.player-detail-photo {
+  width: 130px;
+  height: 130px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 2px solid #1f2937;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+  background: #020617;
+}
+
+/* 이름 / 팀 / 포지션 */
+.player-header-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.player-header-main h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.player-jersey {
+  margin-left: 0.45rem;
+  font-size: 1rem;
+  padding: 0.08rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid #4b5563;
+  color: #e5e7eb;
+  background: rgba(15, 23, 42, 0.8);
+}
+
+.player-team-pos {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text-sub);
+}
+
+/* 타/투 / 출생 / 신체 메타 정보 오른쪽 정렬 */
+.player-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 0.82rem;
+  align-items: flex-end;
+  min-width: 180px;
+}
+
+.player-meta > div {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.player-meta .label {
+  color: #9ca3af;
+  font-size: 0.8rem;
+}
+
+/* --- 시즌 선택 --- */
+.player-section {
+  margin-top: 1.6rem;
+}
+
+.player-section h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+
+.season-section {
+  margin-top: 0.4rem;
+}
+
+.season-select-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--text-sub);
+}
+
+.season-select-wrap label {
+  font-size: 0.86rem;
+}
+
+.season-select {
+  background: #020617;
+  border: 1px solid var(--card-border);
+  border-radius: 999px;
+  padding: 0.25rem 0.6rem;
+  color: var(--text-main);
+  font-size: 0.86rem;
+  outline: none;
+}
+
+.season-select:focus {
+  border-color: var(--mlb-blue);
+}
+
+/* --- 스탯 테이블 --- */
+.player-stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  font-size: 0.82rem;
+}
+
+.player-stats-table thead {
+  background: #111827;
+}
+
+.player-stats-table th,
+.player-stats-table td {
+  padding: 0.4rem 0.45rem;
+  border-bottom: 1px solid var(--card-border);
+  text-align: center;
+}
+
+.player-stats-table th {
+  font-weight: 600;
+}
+
+.player-stats-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.no-stats {
+  font-size: 0.85rem;
+  color: var(--text-sub);
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .player-detail {
+    padding: 1.2rem 1.1rem 2.3rem;
+  }
+
+  .player-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .player-meta {
+    align-items: flex-start;
+  }
+
+  .player-detail-photo {
+    width: 110px;
+    height: 110px;
+  }
+}

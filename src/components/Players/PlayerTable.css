@@ -1,0 +1,130 @@
+.player-table {
+  margin-top: 2rem;
+}
+
+.player-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.player-table-header h2 {
+  margin: 0;
+}
+
+.player-filters {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.player-filters button {
+  padding: 0.25rem 0.6rem;
+  font-size: 0.85rem;
+  border-radius: 999px;
+  border: 1px solid #4b5563;
+  background: #020617;
+  color: #e5e7eb;
+  cursor: pointer;
+}
+
+.player-filters button.active {
+  background: #2563eb;
+  border-color: #2563eb;
+}
+
+.player-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #020617;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.player-table th,
+.player-table td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #1f2937;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.player-table thead {
+  background: #111827;
+}
+
+.player-table tbody tr:hover {
+  background: #030712;
+}
+.player-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.player-header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* 🔍 검색창 */
+.player-search input {
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid #4b5563;
+  background: #020617;
+  color: #e5e7eb;
+  font-size: 0.85rem;
+}
+
+.player-search input::placeholder {
+  color: #6b7280;
+}
+
+@media (max-width: 768px) {
+  .player-table-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .player-header-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+.stats-loading-text {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-bottom: 0.3rem;
+}
+.player-header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* 정렬 셀렉트 */
+.player-sort select {
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid #4b5563;
+  background: #020617;
+  color: #e5e7eb;
+  font-size: 0.8rem;
+}
+
+.stats-loading-text {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-bottom: 0.3rem;
+}
+.player-table tbody tr.player-row {
+  cursor: pointer;
+}
+
+.player-table tbody tr.player-row:hover {
+  background: #030712;
+}

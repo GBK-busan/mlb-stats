@@ -1,0 +1,429 @@
+/* ===== 공통 레이아웃 ===== */
+.team-detail {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem 3rem;
+  color: var(--text-main);
+}
+
+/* 뒤로가기 버튼 (팀 목록으로) */
+.team-detail .back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  background: rgba(255, 255, 255, 0.06);
+  padding: 6px 16px;
+  border-radius: 10px;
+
+  color: var(--text-sub);
+  font-size: 0.85rem;
+  font-weight: 500;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(4px);
+
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  margin-bottom: 0.7rem;
+}
+
+.team-detail .back-link:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(-2px);
+}
+
+.team-detail .back-link:active {
+  transform: translateX(-1px) scale(0.98);
+}
+
+/* ===== 팀 헤더 카드 ===== */
+.team-header {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  padding: 1rem 1.2rem;
+  background: var(--card-bg);
+  border-radius: 16px;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.55);
+  margin-bottom: 1.6rem;
+}
+
+.team-detail-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  background: #020617;
+  border-radius: 18px;
+  border: 1px solid #1f2937;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.team-header h1 {
+  margin: 0 0 0.15rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.team-sub {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-sub);
+}
+
+.team-venue {
+  margin: 0.2rem 0 0;
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+/* 시즌 선택 박스 (오른쪽) */
+.team-season-box {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.3rem;
+  font-size: 0.85rem;
+  color: var(--text-sub);
+}
+
+.team-season-box label {
+  font-size: 0.8rem;
+}
+
+.season-select {
+  background: #020617;
+  border: 1px solid var(--card-border);
+  border-radius: 999px;
+  padding: 0.25rem 0.7rem;
+  color: var(--text-main);
+  font-size: 0.86rem;
+  outline: none;
+}
+
+.season-select:focus {
+  border-color: var(--mlb-blue);
+}
+
+/* ===== 공통 섹션 ===== */
+.team-section {
+  margin-top: 1.6rem;
+}
+
+.team-section h2 {
+  margin: 0 0 0.6rem;
+  font-size: 1rem;
+}
+
+.no-stats {
+  font-size: 0.85rem;
+  color: var(--text-sub);
+}
+
+/* ===== 팀 스탯 테이블 (타격 / 투구) ===== */
+.team-stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  font-size: 0.82rem;
+}
+
+.team-stats-table thead {
+  background: #111827;
+}
+
+.team-stats-table th,
+.team-stats-table td {
+  padding: 0.4rem 0.45rem;
+  border-bottom: 1px solid var(--card-border);
+  text-align: center;
+}
+
+.team-stats-table th {
+  font-weight: 600;
+}
+
+.team-stats-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ===== 리더보드 ===== */
+.leaders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.leaders-block {
+  background: var(--card-bg);
+  border-radius: 12px;
+  border: 1px solid var(--card-border);
+  padding: 0.8rem 0.9rem;
+}
+
+.leaders-block h3 {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+}
+
+.leaders-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+
+.leaders-table th,
+.leaders-table td {
+  padding: 0.3rem 0.35rem;
+  border-bottom: 1px solid var(--card-border);
+  text-align: left;
+}
+
+.leaders-table th:nth-child(3),
+.leaders-table td:nth-child(3) {
+  text-align: right;
+}
+
+.leaders-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* 선수 링크 공통 */
+.leader-player-link {
+  color: #e5e7eb;
+  text-decoration: none;
+}
+
+.leader-player-link:hover {
+  text-decoration: underline;
+}
+
+/* ===== 로스터 테이블 ===== */
+.roster-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  font-size: 0.8rem;
+}
+
+.roster-table thead {
+  background: #111827;
+}
+
+.roster-table th,
+.roster-table td {
+  padding: 0.35rem 0.4rem;
+  border-bottom: 1px solid var(--card-border);
+  text-align: left;
+}
+
+.roster-table th:first-child,
+.roster-table td:first-child {
+  width: 40px;
+  text-align: center;
+}
+
+.roster-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ===== 반응형 ===== */
+@media (max-width: 768px) {
+  .team-detail {
+    padding: 1.2rem 1.1rem 2.3rem;
+  }
+
+  .team-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .team-season-box {
+    margin-left: 0;
+    align-items: flex-start;
+  }
+
+  .team-detail-logo {
+    width: 72px;
+    height: 72px;
+  }
+
+  .leaders-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* === 팀 시즌 스케줄 섹션 === */
+
+.team-schedule-section {
+  margin-top: 2rem;
+  padding: 1.5rem 1.75rem;
+  background: var(--card-bg, #050816);
+  border-radius: 0.9rem;
+  border: 1px solid var(--border, #1f2937);
+}
+
+.team-schedule-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 0.75rem;
+}
+
+.team-schedule-header h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-strong, #e5e7eb);
+}
+
+.team-schedule-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.schedule-label {
+  font-size: 0.8rem;
+  color: var(--text-muted, #9ca3af);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.schedule-select {
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.9);
+  background: #020617;
+  color: #e5e7eb;
+  outline: none;
+}
+
+.schedule-select:focus-visible {
+  box-shadow: 0 0 0 2px #000, 0 0 0 3px var(--mlb-red, #ba0021);
+}
+
+.schedule-count {
+  font-size: 0.8rem;
+  color: var(--text-muted, #9ca3af);
+}
+
+.schedule-loading,
+.schedule-empty {
+  font-size: 0.85rem;
+  color: var(--text-muted, #9ca3af);
+  margin-top: 0.5rem;
+}
+
+/* 테이블 스타일 */
+
+.team-schedule-table-wrapper {
+  margin-top: 0.5rem;
+  max-height: 420px;
+  overflow: auto;
+}
+
+.team-schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+
+.team-schedule-table thead tr {
+  background: rgba(15, 23, 42, 0.9);
+}
+
+.team-schedule-table th,
+.team-schedule-table td {
+  padding: 6px 8px;
+  text-align: left;
+  border-bottom: 1px solid rgba(31, 41, 55, 0.9);
+  white-space: nowrap;
+}
+
+.team-schedule-table tbody tr:nth-child(even) {
+  background: rgba(15, 23, 42, 0.6);
+}
+
+.team-schedule-table tbody tr:hover {
+  background: rgba(30, 64, 175, 0.4);
+}
+
+.schedule-link {
+  font-size: 0.78rem;
+  color: #93c5fd;
+  text-decoration: none;
+  padding: 3px 7px;
+  border-radius: 999px;
+  border: 1px solid rgba(96, 165, 250, 0.8);
+  background: rgba(15, 23, 42, 0.8);
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease,
+    transform 0.1s ease;
+}
+
+.schedule-link:hover {
+  background: #1d4ed8;
+  border-color: #60a5fa;
+  color: #f9fafb;
+  transform: translateY(-1px);
+}
+
+/* 모바일 */
+
+@media (max-width: 768px) {
+  .team-schedule-section {
+    padding: 1.25rem 1rem;
+  }
+
+  .team-schedule-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .team-schedule-table-wrapper {
+    max-height: 360px;
+  }
+
+  .team-schedule-table th,
+  .team-schedule-table td {
+    padding: 5px 6px;
+  }
+}
+/* === 경기 결과 배지 === */
+
+.result-badge {
+  display: inline-block;
+  width: 28px;
+  text-align: center;
+  padding: 2px 0;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* 승리 — MLB 블루 */
+.result-W {
+  background: #006bb6;
+}
+
+/* 패배 — MLB 레드 */
+.result-L {
+  background: #ba0021;
+}
+
+/* 무승부 또는 결정 없음 — 그레이 */
+.result-D,
+.result-ND {
+  background: #475569;
+}
