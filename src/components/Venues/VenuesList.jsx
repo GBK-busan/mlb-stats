@@ -1,6 +1,6 @@
 import { useEffect, useState, useMemo } from "react";
 import { Link } from "react-router-dom";
-import { fetchTeams } from "../../api/mlbApi";
+import { fetchTeams } from "../../api/mlbApi.js";
 import { getTeamNameKoById, getTeamLogoUrl } from "../../common/teamsNameKo";
 import "./VenuesList.css";
 

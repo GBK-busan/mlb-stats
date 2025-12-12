@@ -1,6 +1,6 @@
 import { useEffect, useState, useMemo } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { fetchVenue, fetchWikipediaSummary } from "../../api/mlbApi";
+import { fetchVenue, fetchWikipediaSummary } from "../../api/mlbApi.js";
 import "./VenueDetail.css";
 
 export default function VenueDetail() {

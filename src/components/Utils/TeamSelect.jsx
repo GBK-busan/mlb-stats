@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchTeams } from "../../api/mlbApi";
+import { fetchTeams } from "../../api/mlbApi.js";
 import { getTeamNameKoById } from "../../common/teamsNameKo";
 import "./TeamSelect.css";
 

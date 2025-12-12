@@ -1,6 +1,6 @@
 import { useEffect, useState, useMemo } from "react";
 import { useParams, Link } from "react-router-dom";
-import { fetchGameDetail, fetchGameHighlights } from "../../api/mlbApi";
+import { fetchGameDetail, fetchGameHighlights } from "../../api/mlbApi.js";
 import {
   getTeamNameKoById,
   getTeamLogoUrl,

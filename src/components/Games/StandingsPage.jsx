@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { fetchStandings } from "../../api/mlbApi";
+import { fetchStandings } from "../../api/mlbApi.js";
 import {
   getTeamNameKoById,
   getTeamColor,

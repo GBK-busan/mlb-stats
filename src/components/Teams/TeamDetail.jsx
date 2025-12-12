@@ -6,7 +6,7 @@ import {
   fetchTeamLeaders,
   fetchTeamRoster,
   fetchTeamSeasonSchedule,
-} from "../../api/mlbApi";
+} from "../../api/mlbApi.js";
 import { getTeamLogoUrl, getTeamNameKoById } from "../../common/teamsNameKo";
 import "./TeamDetail.css";
 import { getDivisionNameKo } from "../../common/divisionNameKo";
