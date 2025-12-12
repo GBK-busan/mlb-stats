@@ -1,6 +1,6 @@
 import { useEffect, useState, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
-import { fetchSchedule } from "../../api/mlbApi";
+import { fetchSchedule } from "../../api/mlbApi.js";
 import {
   getTeamNameKoById,
   getTeamLogoUrl,
