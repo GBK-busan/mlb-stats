@@ -4,7 +4,7 @@ import {
   fetchTeamRoster,
   fetchAllRosters,
   fetchPlayerSeasonStats,
-} from "../../api/mlbApi";
+} from "../../api/mlbApi.js";
 import { getTeamNameKoById } from "../../common/teamsNameKo";
 import "./PlayerTable.css";
 

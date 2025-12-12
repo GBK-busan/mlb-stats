@@ -1,6 +1,6 @@
 import { useState } from "react";
 import TeamSelect from "./Utils/TeamSelect";
-import GameList from "./games/GameList";
+import GameList from "./Games/GameList";
 import DatePicker from "./Utils/DatePicker";
 
 export default function Home() {
