@@ -1,111 +1,139 @@
-🎉 MLB Stats Dashboard
+# 🎉 MLB Stats Dashboard
 
 React + Vite 기반의 MLB 경기/선수/팀/구장 정보 조회 웹 애플리케이션
 
-MLB 공식 StatsAPI 데이터를 활용해
+MLB 공식 **StatsAPI** 데이터를 활용해
 
-📅 경기 일정 조회
+- 📅 경기 일정 조회
+- 🧾 경기 상세 스코어 / 라인스코어 / 플레이 로그
+- 🎬 하이라이트 영상
+- 🧑‍🤝‍🧑 선수 상세 정보 및 시즌별 스탯
+- 🏟️ 구장 목록 및 상세 페이지
+- 🏳️ 팀 목록 / 팀 상세 / 시즌 경기 기록  
+  을 확인할 수 있는 대시보드입니다.
 
-🧾 경기 상세 스코어/로그/하이라이트 영상
+---
 
-🧑‍🤝‍🧑 선수 상세 스탯 조회 (타격/투구)
+## 📸 미리보기 (Screenshots)
 
-🏟️ 구장 정보 조회 및 상세 페이지
+> ⚠️ 배포가 완료된 후 이미지 또는 GIF를 추가하세요.
 
-🏳️ 팀 목록 / 팀 상세 / 시즌 경기 기록
-을 한 곳에서 확인할 수 있는 대시보드입니다.
+---
 
-Netlify 또는 GitHub Pages로 쉽게 배포할 수 있으며,
-React Router를 사용한 SPA 구조로 구현되었습니다.
+## 🚀 주요 기능
 
-🚀 주요 기능
-🏟 경기 일정 & 상세 정보
+### 🏟 경기 정보
 
-날짜별 경기 검색
+- 날짜 선택 → 해당 날짜 경기 모두 조회
+- 팀 필터
+- 경기 상세페이지:
+  - 점수 요약
+  - 이닝별 라인스코어
+  - 플레이 로그(이닝별 필터링 가능)
+  - 승/패/세이브 투수
+  - 타자 주요 기록
+  - 하이라이트 영상 (캐러셀)
 
-팀 필터링
+---
 
-Linescore(이닝별 점수)
+### 👤 선수 정보
 
-플레이 로그
+- 선수 검색
+- 시즌별 통계 조회 (타격/투구)
+- 선수 상세 페이지
+- 팀/포지션/키/몸무게 등 기본 프로필
+- 시즌 선택 기능
 
-승/패/세이브 투수 표시
+---
 
-하이라이트 영상 제공 (StatsAPI → MLB.com 영상 링크)
+### 🏳️ 팀 정보
 
-👤 선수 정보
+- 팀 로고 + 한글 팀명
+- 리그/지구별 자동 그룹화
+- 팀 상세 정보
+- 시즌별 경기가 한 번에 보임
+- 경기별 승/패 배지
+- 홈구장 상세 페이지 링크
 
-사진, 생년월일, 신체 정보 등 기본 데이터
+---
 
-시즌별 스탯 (타격/투구) 조회
+### 🏟 구장 정보
 
-시즌 선택 기능
+- 모든 MLB Ballpark 리스트
+- 구장 상세 (이미지, 설명, 홈팀 정보)
+- 구장 정보는 StatsAPI + Wikipedia 혼합 데이터 기반
 
-선수별 하이라이트 영상 (계획 가능)
+---
 
-🏳️ 팀 정보
+### 🎨 UI/UX 특징
 
-팀 로고 + 한글 팀명 매핑
+- MLB 네이비 + 레드 강조 컬러
+- 반응형
+- 컴포넌트 구조 명확하게 구조화
+- 깨끗한 카드/그리드 UI
 
-리그/지구별 정렬
+---
 
-팀 상세 정보 (팀 색상 / 주요 선수 / 시즌 경기 기록)
+## 🛠 기술 스택
 
-홈구장 바로가기 버튼
+| 분야     | 사용 기술                                |
+| -------- | ---------------------------------------- |
+| Frontend | React, Vite, React Router                |
+| Styling  | CSS, Custom MLB Theme                    |
+| Data     | MLB StatsAPI                             |
+| Build    | Vite                                     |
+| Deploy   | Netlify 또는 GitHub Pages                |
+| 기타     | Axios, Hooks(useEffect/useMemo/useState) |
 
-🏟 구장 정보
+---
 
-MLB 팀이 사용하는 모든 Ballpark 목록
+## 📂 프로젝트 구조
 
-각 구장의 상세 설명(위키 기반)
-
-대표 이미지 + 위치 아이콘
-
-홈 팀 표시
-
-🎨 UI/UX 특징
-
-MLB 컬러 테마 반영 (Navy + Red accent)
-
-어두운 모드 스타일
-
-반응형 레이아웃
-
-컴포넌트 기반 구조로 확장성 높음
-
-🛠 기술 스택
-분야 사용 기술
-Frontend React, Vite, React Router
-Styling CSS Modules / Custom CSS
-Data MLB StatsAPI
-Build & Deploy Vite, Netlify / GitHub Pages
-기타 Axios, useEffect/useMemo Hooks, Icon Packs
-📂 프로젝트 구조
+```bash
 src/
 │
 ├── api/
-│ └── mlbApi.js # StatsAPI 호출 함수
+│   └── mlbApi.js
 │
 ├── components/
-│ ├── Games/ # 경기 리스트, 상세, 로그 등
-│ ├── Players/ # 선수 목록/상세
-│ ├── Teams/ # 팀 목록/상세
-│ ├── Venues/ # 구장 목록/상세
-│ └── Utils/ # 공용 컴포넌트 (LinescoreTable 등)
+│   ├── Games/
+│   │   ├── GameList.jsx
+│   │   ├── GameDetail.jsx
+│   │   └── PlayLog.jsx
+│   ├── Players/
+│   │   ├── PlayerTable.jsx
+│   │   └── PlayerDetail.jsx
+│   ├── Teams/
+│   │   ├── TeamsList.jsx
+│   │   └── TeamDetail.jsx
+│   ├── Venues/
+│   │   ├── VenuesList.jsx
+│   │   └── VenueDetail.jsx
+│   └── Utils/
+│       ├── LinescoreTable.jsx
+│       ├── DatePicker.jsx
+│       └── TeamSelect.jsx
 │
 ├── common/
-│ ├── teamsNameKo.js # 팀 한글 매핑
-│ └── divisionNameKo.js # 지구명 한글 매핑
+│   ├── teamsNameKo.js
+│   ├── divisionNameKo.js
+│   └── teamColors.js
 │
 ├── App.jsx
 └── main.jsx
+```
 
-🐞 이슈 & 개선 계획
+🐞 개선 예정 기능
 
-팀/선수 하이라이트 영상 더 정교하게 매칭하기
+팀/선수별 하이라이트 자동 필터링 강화
 
-구장 상세 페이지에 지도(Map API) 연동
+구장 지도(Map API) 추가
 
-즐겨찾기 기능 (선수/팀)
+즐겨찾기(팀/선수) 기능
 
-시즌 선택 시 더 많은 통계 연동
+모바일 UI 최적화
+
+📜 라이선스 안내
+
+본 프로젝트는 MLB StatsAPI 기반으로 동작하며,
+데이터 및 영상 링크는 MLB Advanced Media의 저작권 규정을 따릅니다.
